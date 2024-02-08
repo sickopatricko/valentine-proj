@@ -2,7 +2,13 @@ import { useState } from "react";
 import "./App.css";
 export default App;
 
-const options = ["Nie", "Dlaczego nie?", "Błagam?", "Nie rób mi tego"];
+const options = [
+  "Nie",
+  "Dlaczego nie?",
+  "Błagam?",
+  "Serio??",
+  "Nie rób mi tego",
+];
 const options2 = ["Tak", "Tak", "Tak", "Nahh ima do my own thing"];
 
 function App() {
