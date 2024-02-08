@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Confetti from "react-confetti";
 export default App;
 
 const options = [
@@ -9,7 +10,6 @@ const options = [
   "Serio??",
   "Nie rób mi tego",
 ];
-const options2 = ["Tak", "Tak", "Tak", "Nahh ima do my own thing"];
 
 function App() {
   return (
@@ -23,12 +23,25 @@ function Main() {
   const [yesPressed, setYesPressed] = useState(false);
   if (yesPressed)
     return (
-      <main>
+      <div>
+        <Confetti
+          drawShape={ctx => {
+            ctx.beginPath();
+            for (let i = 0; i < 22; i++) {
+              const angle = 0.3 * i;
+              const x = (0.2 + 1.5 * angle) * Math.cos(angle);
+              const y = (0.2 + 1.5 * angle) * Math.sin(angle);
+              ctx.lineTo(x, y);
+            }
+            ctx.stroke();
+            ctx.closePath();
+          }}
+        />
         <div className="gif">
           <img src="https://media1.tenor.com/m/ju1buBTwt64AAAAC/spiderverse-across-the-spiderverse.gif" />
         </div>
         <h1 className="text">Lets gooo! To bedziemy my 🥹</h1>
-      </main>
+      </div>
     );
 
   return (
