@@ -38,9 +38,12 @@ function Main() {
           }}
         />
         <div className="gif">
-          <img src="https://media1.tenor.com/m/ju1buBTwt64AAAAC/spiderverse-across-the-spiderverse.gif" />
+          <img
+            className="us"
+            src="https://media1.tenor.com/m/ju1buBTwt64AAAAC/spiderverse-across-the-spiderverse.gif"
+          />
         </div>
-        <h1 className="text">Lets gooo! To bedziemy my 🥹</h1>
+        <h1 className="ending-text">Lets gooo! To bedziemy my 🥹</h1>
       </div>
     );
 
@@ -48,6 +51,7 @@ function Main() {
     <main>
       <div className="gif">
         <img
+          className="spiderman"
           width={300}
           height={300}
           src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzBjejdoeHczOTBtcWdleDhlYzB6YXp5dWdlNGlvcHAzYnFsbGF4NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/X23pjaOFiyH3G/giphy.gif"
@@ -84,6 +88,7 @@ function Button({ yesPressed, setYesPressed }) {
       <button
         className="no"
         onMouseOver={onNo}
+        onClick={onNo}
         style={{ left: `${leftSize}px`, top: `${topSize}px` }}
       >
         {options[currentIndex]}
